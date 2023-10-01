@@ -1,5 +1,4 @@
 package BaseConverter;
-import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -129,9 +128,8 @@ public class Convert {
                 break;
 
             case 16:
-                // When we want to pass hexadecimal into decimal, we should use an= Big Int. Integer.parseInt() doesnt accept F as hexadecimal number, for example 
                 System.out.println("Binary: " + Integer.toBinaryString(Integer.parseInt(num, 16)) + "\n" + 
-                "Octal: " + Integer.toOctalString(Integer.parseInt(num, 16)) + "\n" + "Decimal: " + new BigInteger(num, 16).toString() + "\n" + "Hexadecimal: " + num.toUpperCase());
+                "Octal: " + Integer.toOctalString(Integer.parseInt(num, 16)) + "\n" + "Decimal: " + Integer.parseInt(num, 16) + "\n" + "Hexadecimal: " + num.toUpperCase());
                 break;
         }
     }
